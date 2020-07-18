@@ -4,7 +4,7 @@
 
 all:
 	@echo === Building for stm32f429zi-nucleo ===============================
-#	+@make --no-print-directory -f make/stm32f429zi-nucleo.make all
+	+@make --no-print-directory -f make/stm32f429zi-nucleo.make all
 #	+@make --no-print-directory -f make/stm32f429zi-nucleo-C++.make all	
 	@echo === Building for stm32f446re-nucleo ===============================
 	+@make --no-print-directory -f make/stm32f446re-nucleo.make all

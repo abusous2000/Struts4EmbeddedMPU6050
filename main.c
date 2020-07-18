@@ -25,7 +25,9 @@
 #include "PotReader.h"
 #include "P9813_RGB_Driver.h"
 
+#if DEBUG_TRACE_PRINT == 1
 BaseSequentialStream *GlobalDebugChannel = (BaseSequentialStream *)&PORTAB_SD;
+#endif
 /* VCP Serial configuration. */
 static const SerialConfig myserialcfg = {
   115200,

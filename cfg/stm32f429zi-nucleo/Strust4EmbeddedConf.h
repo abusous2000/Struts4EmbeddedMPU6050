@@ -7,6 +7,9 @@
 
 #ifndef CFG_STRUST4EMBEDDEDCONF_H_
 #define CFG_STRUST4EMBEDDEDCONF_H_
+#ifndef S4E_USE_SDCARD
+#define S4E_USE_SDCARD 			0
+#endif
 
 //#define MAX_ACTION_EVENTS                6
 #define BLINKER_THD_STACK_SIZE             1024//512
@@ -14,24 +17,31 @@
 #ifndef USE_LCD_TFT
 #define USE_LCD_TFT 			0
 #endif
+
 #ifndef S4E_USE_JOYSTICK
 #define S4E_USE_JOYSTICK        1
 #endif
+
 #ifndef S4E_USE_BLINKER_THD
 #define S4E_USE_BLINKER_THD     1
 #endif
+
 #ifndef S4E_USE_WIFI_MODULE_THD
 #define S4E_USE_WIFI_MODULE_THD 0
 #endif
+
 #ifndef S4E_USE_SSD1306_LCD
 #define S4E_USE_SSD1306_LCD     1
 #endif
+
 #ifndef S4E_USE_POT
 #define S4E_USE_POT             1
 #endif
+
 #ifndef S4E_USE_PWM
 #define S4E_USE_PWM             0
 #endif
+
 //With This board, you cannot used ARD_11 & ETH, there is a conflict
 #ifndef S4E_USE_BUZZER
 #define S4E_USE_BUZZER				0
