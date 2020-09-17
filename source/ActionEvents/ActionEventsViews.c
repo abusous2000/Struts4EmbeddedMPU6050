@@ -9,12 +9,13 @@
 #include "Strust4EmbeddedConf.h"
 #include "ActionEvents.h"
 #include "Strust4Embedded.h"
+#include "ssd1306.h"
 
 void mpu6050FormatAngles(char *buff, uint8_t size);
 int8_t getCurrentMute(void);
 int8_t getCurrentVolume(void);
 void updateScreen(void){
-#if S4E_USE_SSD1306_LCD > 0
+#if S4E_USE_SSD1306_LCD != 0
    char  buff[20]={0};
    chsnprintf(buff, sizeof(buff),"Vol:%d",getCurrentVolume());
    uint8_t row = 20;

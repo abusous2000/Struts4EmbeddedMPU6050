@@ -111,4 +111,8 @@
 //#define LINE_ARD_D2                 PAL_LINE(GPIOA, 10U)//D2 Pin
 #define MPU_INT_PORT					GPIOA
 #define MPU_INT_PIN						10
+
+#define S4E_USE_EBYTE_LORA 				0
+#define PPM_FRAME_DECODER 				0
+
 #endif /* CFG_STRUST4EMBEDDED_H_ */

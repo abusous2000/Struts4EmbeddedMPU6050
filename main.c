@@ -59,7 +59,11 @@ int main(void) {
 #endif
 	initMPU6050Thread();
 	while (true){
-	    chThdSleepMilliseconds(1500);
+	  chThdSleepMilliseconds(1500);
+	  #if S4E_USE_MQTT != 0
+	  if ( !isDefaultMQTTBrokerConnected() )
+		  reconnectDefaultMQTTBroker();
+	  #endif
 	}
 
 	return 0;
